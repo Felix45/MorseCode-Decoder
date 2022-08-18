@@ -36,10 +36,15 @@ Install all project dependencies by running the command below
   $ git --version
   $ ruby --version && irb
 ```
+
+### Run the application
+```
+  $ ruby challenge.rb
+```
 ### Check linter errors
 Start the webpack dev server
 ``` 
-  $ robocop --color
+  $ rubocop --color
 ```
 
 
