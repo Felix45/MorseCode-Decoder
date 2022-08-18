@@ -9,3 +9,24 @@ def decode_char(char)
   }
   chars[char]
 end
+
+def decode_word(morse_word)
+  actual_word = ''
+
+  morse_word.split.each do |letter|
+    char = decode_char(letter)
+    actual_word += char
+  end
+  actual_word
+end
+
+def decode(morse_sentence)
+  words = []
+
+  morse_sentence.split('   ').each do |word|
+    words.push(decode_word(word))
+  end
+  words.join(' ')
+end
+
+print decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
